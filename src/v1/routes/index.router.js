@@ -21,4 +21,17 @@ router.get("/api/users", (req, res, next) => {
   });
 });
 
+router.get("/api/test", (req, res, next) => {
+  res.status(200).json({
+    status: "success",
+    message: "api ok",
+    data: [
+      {
+        name: "ronaldo",
+        age: 40,
+      },
+    ],
+  });
+});
+
 module.exports = router;
